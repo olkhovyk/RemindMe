@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackground"
@@ -17,14 +19,34 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"     />
+                    <!--tabIndicator - цвет, которым будет подсвечиваться выбранный таб, height - толщина полоски подсветки
+                     -->
+                    <android.support.design.widget.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabIndicatorColor="@android:color/white"
+                        app:tabIndicatorHeight="6dp"
+                        app:tabSelectedTextColor="@android:color/white"/>
+                    
          </android.support.design.widget.AppBarLayout>
+        <!--Добавляю фрагменты во вкладки-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior = "@string/appbar_scrolling_view_behavior"/>
+        
     </android.support.design.widget.CoordinatorLayout>
 
-    //Добавляю выдвижную панель для навигации
+    <!--Добавляю выдвижную панель для навигации, кнопку меню для навигации, и хедер....-->
     <android.support.design.widget.NavigationView
         android:id="@+id/navigation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"/>
+        android:layout_gravity="start"
+        
+        app:menu="@menu/menu_navigation"
+        app:headerLayout="@layout/navigation_header"/>
 
 </android.support.v4.widget.DrawerLayout>
