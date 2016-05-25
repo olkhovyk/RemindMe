@@ -14,11 +14,12 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
                      <android.support.v7.widget.Toolbar
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"     />
+                         xmlns:android="http://schemas.android.com/apk/res/android"
+                          android:id="@+id/toolbar"
+                         android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                          android:layout_width="match_parent"
+                         android:layout_height="?attr/actionBarSize"
+                         android:background="?attr/colorPrimary"     />
                     <!--tabIndicator - цвет, которым будет подсвечиваться выбранный таб, height - толщина полоски подсветки
                      -->
                     <android.support.design.widget.TabLayout
@@ -36,6 +37,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior = "@string/appbar_scrolling_view_behavior"/>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_add_white"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            app:backgroundTint="@color/colorPrimary"/>
         
     </android.support.design.widget.CoordinatorLayout>
 
@@ -48,5 +60,7 @@
         
         app:menu="@menu/menu_navigation"
         app:headerLayout="@layout/navigation_header"/>
+    
+
 
 </android.support.v4.widget.DrawerLayout>
