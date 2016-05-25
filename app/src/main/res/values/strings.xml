@@ -2,8 +2,17 @@
     <string name="app_name">RemindMeProject</string>
     <string name="search_title">Search</string>
 
-    <string name="menu_item_notification">Напоминания</string>
 
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_close">Close</string>
+
+    <string name="menu_item_notification">Напоминания</string>
+
+    <string name="tab_item_history">History</string>
+    <string name="tab_item_ideas">Ideas</string>
+    <string name="tab_item_todo">Todo</string>
+    <string name="tab_item_birthdays">Birthdays</string>
+
+
+
 </resources>
